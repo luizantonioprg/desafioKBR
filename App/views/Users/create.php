@@ -1,5 +1,5 @@
 <div class="containerLogo">
-	<div class="slogan">
+    <div class="slogan">
       <h1>Corcovado Express</h1>
     </div>
     <div class="imageLogoContainer">
@@ -34,7 +34,7 @@
 
 
 
-				<button type="submit" name="submitCreate">Criar</button>
+	<button type="submit" name="submitCreate">Criar</button>
         <?php
             foreach($data['msg'] as $m){
               echo "<h2>".$m."</h2>";
