@@ -96,7 +96,7 @@
   
   </div>
 </section>
-<a class="apiButton" href="/ControllerApi/consumeApi">API</a>
+<a class="apiButton" href="/ApiController/consumeApi">API</a>
 
 
 
