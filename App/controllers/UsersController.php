@@ -12,37 +12,37 @@ class UsersController extends CONTROLLER_BASE{
     $this->view('Users/read',$resultado);
   }
   public function create(){
-    Auth::checkLogin();
-    $msg = array();
+	    Auth::checkLogin();
+	    $msg = array();
 
-     if(isset($_POST['submitCreate'])){
+	     if(isset($_POST['submitCreate'])){
 
-      $nomeCadastrar = filter_var($_POST['nomeCadastrar'], FILTER_SANITIZE_STRING);
-      $senhaCadastrar = filter_var($_POST['senhaCadastrar'], FILTER_SANITIZE_STRING);
-      $emailCadastrar = $_POST["emailCadastrar"];
-      $privilegioCadastrar = filter_var($_POST['privilegioCadastrar'], FILTER_SANITIZE_STRING);
+	      $nomeCadastrar = filter_var($_POST['nomeCadastrar'], FILTER_SANITIZE_STRING);
+	      $senhaCadastrar = filter_var($_POST['senhaCadastrar'], FILTER_SANITIZE_STRING);
+	      $emailCadastrar = $_POST["emailCadastrar"];
+	      $privilegioCadastrar = filter_var($_POST['privilegioCadastrar'], FILTER_SANITIZE_STRING);
 
 
-      if(empty($_POST['nomeCadastrar'])){
-        $msg[]='preencha';
-      }else if(empty($_POST['emailCadastrar'])){
-        $msg[]='preencha';
-      }else if (filter_var($emailCadastrar, FILTER_VALIDATE_EMAIL)===false) {
-        $msg[]= "Invalid email format";
-      }else if(empty($_POST['senhaCadastrar'])){
-        $msg[]='preencha';
-      }else if(empty($_POST['privilegioCadastrar'])){
-        $msg[]='preencha';
-      }else{
-        $obj = $this->model('UsersModel');
-        $obj->nome = $_POST['nomeCadastrar'] ;
-        $obj->email = $_POST['emailCadastrar'] ;
-        $obj->senha = $_POST['senhaCadastrar'] ;
-        $obj->privilegio = $_POST['privilegioCadastrar'] ;
+	      if(empty($_POST['nomeCadastrar'])){
+		$msg[]='preencha';
+	      }else if(empty($_POST['emailCadastrar'])){
+		$msg[]='preencha';
+	      }else if (filter_var($emailCadastrar, FILTER_VALIDATE_EMAIL)===false) {
+		$msg[]= "Invalid email format";
+	      }else if(empty($_POST['senhaCadastrar'])){
+		$msg[]='preencha';
+	      }else if(empty($_POST['privilegioCadastrar'])){
+		$msg[]='preencha';
+	      }else{
+		$obj = $this->model('UsersModel');
+		$obj->nome = $_POST['nomeCadastrar'] ;
+		$obj->email = $_POST['emailCadastrar'] ;
+		$obj->senha = $_POST['senhaCadastrar'] ;
+		$obj->privilegio = $_POST['privilegioCadastrar'] ;
 
-       $msg[] = $obj->create();
-      }
-    }
+	       $msg[] = $obj->create();
+	      }
+	    }
 		$this->view('Users/create',$resultado=['msg'=>$msg]);
 	}
   public function update(){
