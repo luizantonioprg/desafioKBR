@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background: #edece4;
+  border: 10px solid #cbc6b9;
+}
+h1 {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

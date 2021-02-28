@@ -1,0 +1,53 @@
+.usersActions {
+  /* border: solid 1px black; */
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 5px;
+}
+.act {
+  /* border: solid 2px black; */
+  width: 300px;
+  height: 300px;
+  text-align: center;
+}
+.act h3 {
+  border: solid 2px black;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: #cbc6b9;
+  font-family: Arial;
+}
+.act a {
+  border: solid 3px black;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #cbc6b9;
+  width: 120px;
+  margin: 2px auto;
+  cursor: pointer;
+}
+.actions {
+  margin-top: 2vh;
+}
+.actionFlex {
+  display: flex;
+  flex-wrap: wrap;
+  /* border: solid 1px black; */
+  margin: 0 5px;
+  align-content: center;
+}
+.apiButton {
+  border: solid 3px black;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #cbc6b9;
+  width: 120px;
+  margin: 2px auto;
+  cursor: pointer;
+}
+.adminText {
+  margin-top: 5vh;
+  font-family: 'Akaya Telivigala', cursive;
+}
