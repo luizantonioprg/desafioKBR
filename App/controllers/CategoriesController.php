@@ -11,29 +11,29 @@ class CategoriesController extends CONTROLLER_BASE{
     $this->view('Categories/read',$resultado);
   }
   public function create(){
-    Auth::checkLogin();
-    $msg = array();
+	    Auth::checkLogin();
+	    $msg = array();
 
-     if(isset($_POST['submitCreate'])){
-      $codigo = $_POST['codigoCadastrar'];
-      $titulo = filter_var($_POST['tituloCadastrar'], FILTER_SANITIZE_STRING);
-       if(empty($_POST['codigoCadastrar'])){
-        $msg[] = 'Preencha o campo';
-      }else if(empty($_POST['tituloCadastrar'])){
-        $msg[] = 'Preencha o campo';
-      }else if(filter_var($codigo, FILTER_VALIDATE_INT) === false){
-        $msg[] = 'Codigo nao é inteiro';
-      }else {  
+	     if(isset($_POST['submitCreate'])){
+	      $codigo = $_POST['codigoCadastrar'];
+	      $titulo = filter_var($_POST['tituloCadastrar'], FILTER_SANITIZE_STRING);
+	       if(empty($_POST['codigoCadastrar'])){
+		$msg[] = 'Preencha o campo';
+	      }else if(empty($_POST['tituloCadastrar'])){
+		$msg[] = 'Preencha o campo';
+	      }else if(filter_var($codigo, FILTER_VALIDATE_INT) === false){
+		$msg[] = 'Codigo nao é inteiro';
+	      }else {  
 
-        $obj = $this->model('CategoriesModel');
-        $obj->codigo = $codigo ;
-        $obj->titulo = $titulo ;
+		$obj = $this->model('CategoriesModel');
+		$obj->codigo = $codigo ;
+		$obj->titulo = $titulo ;
 
-       $msg[] = $obj->create();
-       }
-    }
-		$this->view('Categories/create',$resultado=['msg'=>$msg]);
-	}
+	       $msg[] = $obj->create();
+	       }
+	    }
+	$this->view('Categories/create',$resultado=['msg'=>$msg]);
+}
 
   public function update(){
     Auth::checkLogin();
