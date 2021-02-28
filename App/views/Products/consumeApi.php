@@ -16,5 +16,5 @@
     <span id="open">&#9776;</span>
   </div>
 </div>
-<h1>Consumindo Api.Resultado Total no console.</h1>
+<h1>Pagina para consumir a Api</h1>
 <h1 id="resultadoApi"></h1>
