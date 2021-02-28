@@ -19,6 +19,6 @@ Sistema restrito de gerenciamento de produtos de um supermercado feito em PHP pr
 ## Instruções
 - Startar o Apache e o Mysql do Xampp
 - No terminal, navegar até a pasta public do projeto e startar o server embutido do php :
-- cd app/public ; php -S localhost:[numeroDaPorta]
+- cd app/public ; php -S localhost:9000
 
 
