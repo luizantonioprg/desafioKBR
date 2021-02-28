@@ -13,8 +13,9 @@ Sistema restrito de gerenciamento de produtos de um supermercado feito em PHP pr
 
 ## SCREENSHOTS DO DESAFIO
 ![corcovado](https://user-images.githubusercontent.com/43731038/109433240-1f587400-79ee-11eb-9d31-da834a56d56b.png)
-
 ![cor2](https://user-images.githubusercontent.com/43731038/109430824-fd58f480-79e1-11eb-80d3-fb7da54c6913.png)
+![ac](https://user-images.githubusercontent.com/43731038/109433829-29c83d00-79f1-11eb-8126-b1f6c6646cb8.png)
+
 
 ## Instruções
 - Startar o Apache e o Mysql do Xampp
