@@ -7,7 +7,7 @@ Sistema restrito de gerenciamento de produtos de um supermercado feito em PHP pr
 ## Dependências: 
 - PHPMailer
 - Jquery
-- FileSaver,
+- FileSaver
 - SheetJS 
 - Ckeditor
 
