@@ -18,9 +18,9 @@
 </div>
 
       <form class="login" action="" method="POST">
-				<input type="text" placeholder="Digite o email" name="emailDeletar">
-				<button type="submit" name="submitDeletar">Deletar</button>
-    	</form>
+	<input type="text" placeholder="Digite o email" name="emailDeletar">
+	<button type="submit" name="submitDeletar">Deletar</button>
+      </form>
       <?php
           
           foreach($data['msg'] as $m){
