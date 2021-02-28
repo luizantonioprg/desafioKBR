@@ -1,5 +1,5 @@
 <div class="containerLogo">
-	<div class="slogan">
+    <div class="slogan">
       <h1>Corcovado Express</h1>
     </div>
     <div class="imageLogoContainer">
