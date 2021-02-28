@@ -17,7 +17,6 @@ class CategoriesModel extends Model{
   }
 
   public function create(){
-
     $sql = "INSERT INTO `categorias`(`codigo`, `titulo`) VALUES (?,?);";
     $stmt = Model::conectarBanco()->prepare($sql);
     $stmt->bindValue(1,$this->codigo);
@@ -42,7 +41,6 @@ class CategoriesModel extends Model{
   }
 
   public function delete($codigo){
-
     $sql = "DELETE FROM `categorias` WHERE codigo = ?";
     $stmt = Model::conectarBanco()->prepare($sql);
     $stmt->bindValue(1,$codigo);   
@@ -53,5 +51,4 @@ class CategoriesModel extends Model{
       return 'Erro';
     }
   }
-
 }

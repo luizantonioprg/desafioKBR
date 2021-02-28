@@ -5,7 +5,6 @@ require_once '../../App/router/CONTROLLER_BASE.php';
 class ApiController extends CONTROLLER_BASE{
 
   public function showProducts(){
-
 		$obj = $this->model('ApiModel');
 		$resultado = $obj->showProducts();
     header("Content-type:application/json;charset:utf-8");

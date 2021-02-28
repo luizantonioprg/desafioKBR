@@ -2,8 +2,6 @@
 
 require_once '../../App/router/MODEL_BASE.php';
 class UsersModel extends Model{
-
-
     public function read(){
       $sql = "SELECT * FROM usuarios";
       $stmt = Model::conectarBanco()->prepare($sql);
@@ -14,12 +12,10 @@ class UsersModel extends Model{
         return $resultado;
   
       }else{
-  
         return [];
       }
     }
     public function create(){
-
       $sql = "INSERT INTO `usuarios`(`nome`, `email`, `senha`, `privilegio`) VALUES (?,?,?,?);";
       $stmt = Model::conectarBanco()->prepare($sql);
       $stmt->bindValue(1,$this->nome);

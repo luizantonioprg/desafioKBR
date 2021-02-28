@@ -45,14 +45,12 @@ class ProductsModel extends Model{
       return $resultado;
 
     }else{
-
       return [];
     }
   }
 
 
   public function delete($codigo){
-
     $sql = "DELETE FROM `produtos` WHERE codigo = ?";
     $stmt = Model::conectarBanco()->prepare($sql);
     $stmt->bindValue(1,$codigo);   
@@ -98,7 +96,6 @@ class ProductsModel extends Model{
   }
 
   public function displaySubCategories(){
-
     $sql = "SELECT * FROM subcategorias";
     $stmt = Model::conectarBanco()->prepare($sql);
     $stmt->execute();

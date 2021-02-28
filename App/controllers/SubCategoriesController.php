@@ -37,8 +37,6 @@ class SubCategoriesController extends CONTROLLER_BASE{
         $obj->titulo = $titulo ;
        $msg[] = $obj->create();
        }
-
-
     }
 		$this->view('SubCategories/create',$resultado=['msg'=>$msg]);
 	}
@@ -64,8 +62,6 @@ class SubCategoriesController extends CONTROLLER_BASE{
     Auth::checkLogin();
     $msg = array();
 
-
-
      if(isset($_POST['submitUpdate'])){
       $codigo = $_POST['codigoAtualizar'];
       $categoria = filter_var($_POST['categoriaAtualizar'], FILTER_SANITIZE_STRING);
@@ -86,9 +82,7 @@ class SubCategoriesController extends CONTROLLER_BASE{
         $obj->categoria = $categoria ;
         $obj->titulo = $titulo ;
         $msg[] = $obj->update();
-       }
-
-       
+       }  
      }
 
     $this->view('SubCategories/update',$resultado=['msg'=>$msg]);

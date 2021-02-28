@@ -2,8 +2,6 @@
 
 require_once '../../App/router/MODEL_BASE.php';
 class SubCategoriesModel extends Model{
-
-
   public function read(){
     $sql = "SELECT * FROM subcategorias";
     $stmt = Model::conectarBanco()->prepare($sql);
@@ -14,13 +12,11 @@ class SubCategoriesModel extends Model{
       return $resultado;
 
     }else{
-
       return [];
     }
   }
 
   public function create(){
-
     $sql = "INSERT INTO `subcategorias`(`codigo`, `categoria`,`titulo`) VALUES (?,?,?);";
     $stmt = Model::conectarBanco()->prepare($sql);
     $stmt->bindValue(1,$this->codigo);
@@ -34,7 +30,6 @@ class SubCategoriesModel extends Model{
     }
 	}
   public function delete($subCategoriaDeletar){
-
     $sql = "DELETE FROM `subcategorias` WHERE codigo = ?";
     $stmt = Model::conectarBanco()->prepare($sql);
     $stmt->bindValue(1,$subCategoriaDeletar);   

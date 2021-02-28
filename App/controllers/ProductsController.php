@@ -78,8 +78,6 @@ class ProductsController extends CONTROLLER_BASE{
         }
        $msg[] = $obj->create();
        }
-
-
     }
 		$this->view('Products/create',$resultado=['msg'=>$msg]);
 	}
@@ -114,8 +112,6 @@ class ProductsController extends CONTROLLER_BASE{
   public function update(){
     Auth::checkLogin();
     $msg = array();
-
-
 
      if(isset($_POST['submitUpdate'])){
       $codigoAtualizar = $_POST['codigoAtualizar'];
@@ -156,8 +152,6 @@ class ProductsController extends CONTROLLER_BASE{
         $obj->status =  $statusAtualizar;
         $msg[] = $obj->update();
        }
-
-
      }
 
     $this->view('Products/update',$resultado=['msg'=>$msg]);

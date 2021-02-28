@@ -31,8 +31,6 @@ class CategoriesController extends CONTROLLER_BASE{
 
        $msg[] = $obj->create();
        }
-
-
     }
 		$this->view('Categories/create',$resultado=['msg'=>$msg]);
 	}
@@ -40,8 +38,6 @@ class CategoriesController extends CONTROLLER_BASE{
   public function update(){
     Auth::checkLogin();
     $msg = array();
-
-
 
      if(isset($_POST['submitUpdate'])){
       $codigoAtualizar = $_POST['codigoAtualizar'];
@@ -60,10 +56,7 @@ class CategoriesController extends CONTROLLER_BASE{
 
         $msg[] = $obj->update();
        }
-
-
      }
-
     $this->view('Categories/update',$resultado=['msg'=>$msg]);
   }
 
@@ -80,8 +73,6 @@ class CategoriesController extends CONTROLLER_BASE{
         $msg[] = $obj->delete($codigo);
       }
     }
-
-
     $this->view('Categories/delete',$resultado=['msg'=>$msg]);
   }
 }

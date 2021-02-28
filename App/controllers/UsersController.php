@@ -4,8 +4,6 @@ require_once '../../App/Auth.php';
 require_once '../public/dependencies/PHPMAILER/PHPMailerautoload.php';
 
 class UsersController extends CONTROLLER_BASE{
-
-
   public function read(){
     Auth::checkLogin();
     $obj = $this->model('UsersModel');
@@ -42,7 +40,6 @@ class UsersController extends CONTROLLER_BASE{
         $obj->senha = $_POST['senhaCadastrar'] ;
         $obj->privilegio = $_POST['privilegioCadastrar'] ;
 
-
        $msg[] = $obj->create();
       }
     }
@@ -78,8 +75,6 @@ class UsersController extends CONTROLLER_BASE{
         $obj->privilegio = $_POST['privilegioAtualizar'] ;
         $msg[] = $obj->update();
        }
-
-       
      }
 
     $this->view('Users/update',$resultado=['msg'=>$msg]);

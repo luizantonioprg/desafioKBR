@@ -2,9 +2,6 @@
 
 require_once '../../App/router/MODEL_BASE.php';
 class SignInModel extends Model{
-
-
-
 	public function index(){
 		return "bem-vindo";
 	}
@@ -24,6 +21,5 @@ class SignInModel extends Model{
 		}else{
 			return 'dados inválidos';
 		}
-
 	}
 }

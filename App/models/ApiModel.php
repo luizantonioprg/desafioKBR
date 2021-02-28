@@ -12,10 +12,7 @@ class ApiModel extends Model{
       return $resultado;
 
     }else{
-
       return [];
     }
 	}
-
-
 }

@@ -4,12 +4,10 @@ require_once '../../App/router/CONTROLLER_BASE.php';
 
 class SignInController extends CONTROLLER_BASE{
 	public function index(){
-
 		$obj = $this->model('SignInModel');
 		$resultado = $obj->index();
 
 		$this->view('SignInFolder/SignInView',$resultado);
-		
 	}
 
 	public function signIn(){
@@ -32,6 +30,4 @@ class SignInController extends CONTROLLER_BASE{
 						}
 					}	
 			}	
-
-
 }
