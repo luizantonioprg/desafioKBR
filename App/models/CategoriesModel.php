@@ -27,7 +27,7 @@ class CategoriesModel extends Model{
     }else{
       return 'Erro';
     }
-	}
+  }
   public function update(){
     $sql = "UPDATE `categorias` SET `titulo`=? WHERE `codigo`=?;";
     $stmt = Model::conectarBanco()->prepare($sql);
